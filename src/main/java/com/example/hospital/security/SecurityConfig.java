@@ -29,9 +29,10 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain (HttpSecurity httpSecurity) throws Exception {
         httpSecurity.formLogin();
-        httpSecurity.authorizeHttpRequests().requestMatchers("/delete").hasRole("ADMIN");
+      //  httpSecurity.authorizeHttpRequests().requestMatchers("/delete").hasRole("ADMIN");
         httpSecurity.authorizeHttpRequests().anyRequest().authenticated();
-        httpSecurity.exceptionHandling().accessDeniedPage("/notAuthorized");
+     //
+        //   httpSecurity.exceptionHandling().accessDeniedPage("/notAuthorized");
         return httpSecurity.build();
 
 
